@@ -1,0 +1,20 @@
+## Title
+SitSmart
+
+## Team Members
+- Ayanna Garrett
+- Logan Castelloe
+
+## Description 
+SitSmart is a babysitting app that connects parents to trusted babysitters in the area. Parents search for avaliable sitters, view profiles and reviews, and book a sitter. Babysitters can manage their avaliablity, set their pay rate and list thier skills.
+
+## App Functions
+1. Parent (customer role):
+    1. Create/modify parent profile - Sign up as a parent.
+    2. Find avaliable sitters - Search for sitters by state, city, or reviews
+    3. Book a sitter for a specfic date - select from sitter avalibility or request a specific date.
+    4. Message the babysitter - private message the sitter in their inbox 
+    5. Leave reviews - review sitter on their skills, professionalism, and overall experience.
+
+    2. Babysitter (provider role):
+    *to be completed by Logan Castelloe
