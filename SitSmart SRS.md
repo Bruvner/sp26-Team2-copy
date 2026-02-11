@@ -2,7 +2,7 @@ Project Name: SitSmart
 Team:Ayanna Garrett-Parent Logan Castelloe-Babysitter
 Course: CSC 340
 Version: 1.0
-Date: 2026-01-30
+Date: 2026-02-11  
 
 1. Overview
 SitSmart is a mobile app designed to connect parents with trusted babysitters in the area.The main issue is that parents struggle to find safe and trustworthy service to watch their children. SitSmart provides a secure platform for searching, booking, messaging, and paying babysitters.
@@ -130,6 +130,13 @@ Usability:
 -comply with child safety laws 
 -Policies: content guidelines(no harrassment); cancellation no later than 2 weeks before booking date; sitters have the right to decline bookings to maintain their schedule.
 
+3. Non‑Functional Requirements (make them measurable)
+Performance: description
+Availability/Reliability: description
+Security/Privacy: description
+Usability: description
+4. Assumptions, Constraints, and Policies
+list any rules, policies, assumptions, etc.
 5. Milestones (course‑aligned)
 M2 Requirements — this file + stories opened as issues.
 M3 High‑fidelity prototype — core customer/provider flows fully interactive.
