@@ -1,52 +1,94 @@
-Project Name: Your App Name
-Team: Names and roles
+Project Name: SitSmart
+Team:Ayanna Garrett-Parent Logan Castelloe-Babysitter
 Course: CSC 340
 Version: 1.0
-Date: 2026-01-30
+Date: 2026-02-11  
 
 1. Overview
-Vision. One or two sentences: who this is for, the core problem, and the outcome.
+SitSmart is a mobile app designed to connect parents with trusted babysitters in the area.The main issue is that parents struggle to find safe and trustworthy service to watch their children. SitSmart provides a secure platform for searching, booking, messaging, and paying babysitters.
 
 Glossary Terms used in the project
 
-Term 1: description.
-Term 2: description
+Parent: A registered user seeking babysitting service 
+Babysitter: A registered user providing childcare.
+Bookign: proccess of booking a babysitter.
+Verification: Proccess of confiriming user idenity.
+
 Primary Users / Roles.
 
-Customer (e.g., Student/Patient/Pet Owner/etc. ) — 1 line goal statement.
-Provider (e.g., Teacher/Doctor/Pet Sitter/etc. ) — 1 line goal statement.
-SysAdmin (optional) — 1 line goal statement.
+Customer (Parent) — Create a profile, Find, book, and pay babysitters safely and efficiently 
+Provider (Babysitter) — Create a profile, manage availability, accept bookings, recieve payment.
+
 Scope (this semester).
 
-<capability 1>
-<capability 2>
-<capability 3>
+<- Create and manage user accounts (Parent/Babysitter)>
+<- Babysitter onboarding; create/edit profile with bio, hourly rate, availability, and experience>
+<- Browse and search babysitters with filtering/sorting(location, rate, rating, availability)>
+<- Send, accept, and decline booking requests.>
+<- Manage bookings (view upcomming, cancel booking)>
+<- In-app messaging between parents and babysitters.>
+<-Reviews(parents write reviews; babysitter can respond)
+
 Out of scope (deferred).
 
-<deferred 1>
-<deferred 2>
-This document is requirements‑level and solution‑neutral; design decisions (UI layouts, API endpoints, schemas) are documented separately.
+<-Background check services>
+<-Live GPS tracking>
+<-Video calling>
+<-Advanced dashboard>
+
+
 
 2. Functional Requirements (User Stories)
-Write each story as: As a <role>, I want <capability>, so that <benefit>. Each story includes at least one Given/When/Then scenario.
+
 
 2.1 Customer Stories
 US‑CUST‑001 —
-Story: As a customer, I want … so that …
+Story: As a parent, I want to create a account so that I can book babysitters.
 Acceptance:
 
-Scenario: <happy path>
-  Given <preconditions>
-  When  <action>
-  Then  <observable outcome>
+Scenario: <Register with vaild information>
+  Given <I am a new user>
+  When  <I provide vaild email and password>
+  Then  <my account is created and I can log in>
+
 US‑CUST‑002 —
-Story: As a customer, I want … so that …
+Story: As a parent, I want to search for babysitters so that I can find available providers.
 Acceptance:
 
-Scenario: <happy path>
-  Given <preconditions>
-  When  <action>
-  Then  <observable outcome>
+Scenario: <Search babysitters by availability>
+  Given <babysitters in the area>
+  When  <I sort by availability>
+  Then  <babysitters with open bookings appear first>
+
+US‑CUST‑003 —
+Story: As a parent, I want to book a babysitter so that I can secure childcare.
+Acceptance:
+
+Scenario: <Booking the babysitter>
+  Given <I have chosen the sitter>
+  When  <I submit a booking request>
+  Then  <the babysitter receives the request>
+
+US‑CUST‑004 —
+Story: As a parent, I want to leave a review so that I can share my experience.
+Acceptance:
+
+Scenario: <Search babysitters by availability>
+  Given <the job was finished>
+  When  <I submit a rating and comment>
+  Then  <the review appears on the sitter's profile>
+
+US‑CUST‑005 —
+Story: As a parent, I want to send messages to the babysitter so that we can discuss booking details before confirming 
+Acceptance:
+
+Scenario: <Communicating with the sitter>
+  Given <I am logged in as a parent>
+  And   <I am viewing a babysitter's profile>
+  When  <I type a message and press "Send">
+  Then  <the babysitter receives the message>
+  And   <the message is saved in the conversation history>
+
 2.2 Provider Stories
 US‑PROV‑001 —
 Story: As a provider, I want … so that …
@@ -64,23 +106,30 @@ Scenario: <happy path>
   Given <preconditions>
   When  <action>
   Then  <observable outcome>
-2.3 SysAdmin Stories
-US‑ADMIN‑001 —
-Story: As a sysadmin, I want … so that …
-Acceptance:
 
-Scenario: <happy path>
-  Given <preconditions>
-  When  <action>
-  Then  <observable outcome>
-US‑ADMIN‑002 —
-Story: As a sysadmin, I want … so that …
-Acceptance:
+3. Non‑Functional Requirements (make them measurable)
+Performance: 
+-The system will load user dashboards within 3 seconds.
+-Booking requests will proccess within 2 seconds.
 
-Scenario: <happy path>
-  Given <preconditions>
-  When  <action>
-  Then  <observable outcome>
+Availability/Reliability: 
+-System uptime will be at least 99%.
+-User data will be backed up daily.
+
+Security/Privacy: 
+-All passwords are encrypted 
+-Payment proccessing will comply with PCI-DSS standards.
+-Users must verify email before having full access.
+
+Usability: 
+-The application will follow standard accessibility guidelines.
+
+4. Assumptions, Constraints, and Policies
+-Modern browsers (latest Chrome/Firefox/Edge/Safari); stable connectivity.
+-user has internet access
+-comply with child safety laws 
+-Policies: content guidelines(no harrassment); cancellation no later than 2 weeks before booking date; sitters have the right to decline bookings to maintain their schedule.
+
 3. Non‑Functional Requirements (make them measurable)
 Performance: description
 Availability/Reliability: description
