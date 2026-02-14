@@ -41,7 +41,7 @@ Out of scope (deferred).
 2. Functional Requirements (User Stories)
 
 
-2.1 Customer Stories
+2.1 Parent (Customer) Stories
 US‑CUST‑001 —
 Story: As a parent, I want to create a account so that I can book babysitters.
 Acceptance:
@@ -89,25 +89,45 @@ Scenario: <Communicating with the sitter>
   Then  <the babysitter receives the message>
   And   <the message is saved in the conversation history>
 
-2.2 Provider Stories
+2.2 Babysitter (Provider) Stories
 US‑PROV‑001 —
-Story: As a provider, I want … so that …
+Story: As a babysitter, I want to arrange my proflie so that parents can know who I am and what I can or can't do for them
 Acceptance:
 
-Scenario: <happy path>
-  Given <preconditions>
-  When  <action>
-  Then  <observable outcome>
+Scenario: <Create a sitter profile>
+  Given <I am a new sitter to the app>
+  When  <I am creating a new viewable profile>
+  Then  <My profile is created and now displayed on the babysitter search page>
+
 US‑PROV‑002 —
-Story: As a provider, I want … so that …
+Story: As a babysitter, I want to see and acess communication or appointment requests so that I can confirm appointments or respond to communications
 Acceptance:
 
-Scenario: <happy path>
-  Given <preconditions>
-  When  <action>
-  Then  <observable outcome>
+Scenario: <Respond and accept appointments and communications>
+  Given <I am avaliable for communications>
+  When  <I recieve a request to communicate and/or to set-up appointments>
+  Then  <My appointment schedule will update as needed, and my communications will be recived by the parent>
 
-3. Non‑Functional Requirements (make them measurable)
+US‑PROV‑003 —
+Story: As a Babysitter, I want to be able to reply to reviews from parents, so that they and others can see them
+Acceptance:
+
+Scenario: <Respond to reviews from parents>
+  Given <I have been given a review by a parent>
+  When  <I make a response to said review>
+  Then  <The message is saved and updates the review section to display it as such>
+
+US-PROV-004 —
+Story: As a babysitter, I want to be able to change and modify my profile, So that updates can be made when needed
+Acceptance:
+
+Scenario: <Change and modify my profile as needed>
+  Given <I need to update my profile>
+  When  <Whenever the need arises (Things change or need to be changed)>
+  Then  <My profile updates for everyone to see>
+
+
+3. Non‑Functional Requirements 
 Performance: 
 -The system will load user dashboards within 3 seconds.
 -Booking requests will proccess within 2 seconds.
@@ -127,23 +147,18 @@ Usability:
 4. Assumptions, Constraints, and Policies
 -Modern browsers (latest Chrome/Firefox/Edge/Safari); stable connectivity.
 -user has internet access
--comply with child safety laws 
+-comply with child and all other safety laws to create a safe and secure enviornment 
 -Policies: content guidelines(no harrassment); cancellation no later than 2 weeks before booking date; sitters have the right to decline bookings to maintain their schedule.
 
-3. Non‑Functional Requirements (make them measurable)
-Performance: description
-Availability/Reliability: description
-Security/Privacy: description
-Usability: description
-4. Assumptions, Constraints, and Policies
-list any rules, policies, assumptions, etc.
 5. Milestones (course‑aligned)
-M2 Requirements — this file + stories opened as issues.
-M3 High‑fidelity prototype — core customer/provider flows fully interactive.
-M4 Design — architecture, schema, API outline.
-M5 Backend API — key endpoints + tests.
-M6 Increment — ≥2 use cases end‑to‑end.
-M7 Final — complete system & documentation.
+M2 Requirements — this SitSmart SRS file + issues as they come in.
+M3 High‑fidelity prototype — core parent(Customer)/babysitter(Provider) flows fully into a interactable and easy to manage enviornment 
+M4 Design — architecture of the app, schema, API outline.
+M5 Backend API — key endpoints + testesting of the app on servers.
+M6 Increment — use cases end‑to‑end.
+M7 Final — fully completed app & documentation for the app.
+
 6. Change Management
-Stories are living artifacts; changes are tracked via repository issues and linked pull requests.
-Major changes should update this SRS.
+Changes are and will be tracked via repository issues and linked pull requests as they are made, needed, or changed. 
+
+Major changes will be updated on this SRS as needed. For example, any code changes, possible user story changes or additions to fit the desired output and the general vision for the final completed app. 
