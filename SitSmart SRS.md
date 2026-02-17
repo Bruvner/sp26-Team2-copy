@@ -146,8 +146,8 @@ Usability:
 
 4. Assumptions, Constraints, and Policies
 -Modern browsers (latest Chrome/Firefox/Edge/Safari); stable connectivity.
--user has internet access
--comply with child and all other safety laws to create a safe and secure enviornment 
+-user has internet access and access to a way to access the app.
+-comply with child and all other safety laws to create a safe and secure enviornment.
 -Policies: content guidelines(no harrassment); cancellation no later than 2 weeks before booking date; sitters have the right to decline bookings to maintain their schedule.
 
 5. Milestones (course‑aligned)
